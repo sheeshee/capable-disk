@@ -1,9 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Main from '../layouts/Main.astro';
 import Card from '../components/Card.astro';
-import IconGitHub from '../components/IconGitHub.astro';
-import IconMedium from '../components/IconMedium.astro';
-import IconLinkedIn from '../components/IconLinkedIn.astro';
+import Socials from '../components/Socials.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,18 +10,14 @@ import IconLinkedIn from '../components/IconLinkedIn.astro';
 	<object id="waving" type="image/svg+xml" data="/capable-disk/waving.svg"></object>
 	<object id="greeting" type="image/svg+xml" data="/capable-disk/greeting.svg"></object>
 </header>
-		<main>
+		<Main>
 			<h1>I'm Sam</h1>
-			<div id="socials">
-				<a href='https://github.com/sheeshee'><IconGitHub/></a>
-				<a href='https://linkedin.com/in/samuel-sheehy'><IconLinkedIn/></a>
-				<a href='https://medium.com/@samsheehy'><IconMedium/></a>
-			</div>
+			<Socials/>	
 			<p>I live in Wales and write code as a job. I'm a <em>learn-a-bit-about-alot</em> sort of person, and I want the things I make to feel like magic ✨</p>
 	<h2>My latest thing</h2>
-	<Card title="Codename" body="I like GitHub’s repo name generator, but I wanted something that worked locally." />
-	<h3>See more things</h3>
-	</main>
+	<Card icon='github' href='https://github.com/sheeshee/codename' title="Codename" body="I like GitHub’s repo name generator, but I wanted something that worked locally." />
+	<h3><a href='/capable-disk/projects'>See more things</a>✨</h3>
+	</Main>
 </Layout>
 
 <style>
@@ -47,13 +42,9 @@ import IconLinkedIn from '../components/IconLinkedIn.astro';
 		padding-bottom: 5px;
 		position: relative;
 		left: 20px;
-		color: red;
 	}
 	#greeting {
 		width: 300px;
-	}
-	a {
-		color: #000042;
 	}
 	h1 {
 		font-size: 4rem;
@@ -62,9 +53,8 @@ import IconLinkedIn from '../components/IconLinkedIn.astro';
 		text-align: center;
 		margin-bottom: 15px;
 	}
-	#socials {
-		margin: 0 auto 10px;
-		width: fit-content;
+	a {
+		color: #000042;
 	}
-
+	
 </style>
