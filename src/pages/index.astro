@@ -6,30 +6,21 @@ import Socials from '../components/Socials.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<header>
+	<div>
 	<object id="waving" type="image/svg+xml" data="/capable-disk/waving.svg"></object>
 	<object id="greeting" type="image/svg+xml" data="/capable-disk/greeting.svg"></object>
-</header>
-		<Main>
+</div>
 			<h1>I'm Sam</h1>
 			<Socials/>	
 			<p>I live in Wales and write code as a job. I'm a <em>learn-a-bit-about-alot</em> sort of person, and I want the things I make to feel like magic ✨</p>
 	<h2>My latest thing</h2>
 	<Card icon='github' href='https://github.com/sheeshee/codename' title="Codename" body="I like GitHub’s repo name generator, but I wanted something that worked locally." />
 	<h3><span>🚀</span><a href='/capable-disk/projects'>See more things</a></h3>
-	</Main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 0 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	header {
+
+	div {
 		display: flex;
 		flex-direction: column;
 		align-items: center;

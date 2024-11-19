@@ -17,7 +17,13 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<header>
+			<a href='/capable-disk/' class={Astro.url.pathname.split("/")[2] == "" ? "underline": ""}>Home</a>
+		    <a href='/capable-disk/projects/' class={Astro.url.pathname.split("/")[2] == "projects" ? "underline": ""}>Projects</a>
+		</header>
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
@@ -25,6 +31,12 @@ const { title } = Astro.props;
 		font-family: system-ui, sans-serif;
 		background: white;
 	}
+	body {
+		max-width: calc(100% - 2rem);
+		width: 800px;
+		margin: auto;
+	}
+
 	code {
 		font-family:
 			Menlo,
@@ -35,5 +47,26 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	main {
+		margin: auto;
+		padding: 0 1rem;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	header {
+		padding: 15px;
+	}
+	header a {
+		color: #000042;
+		text-decoration: none;
+		margin: 0 10px;
+		font-size: large;
+	}
+	header a:hover {
+		text-decoration: underline
+	}
+	.underline {
+		text-decoration: underline
 	}
 </style>
