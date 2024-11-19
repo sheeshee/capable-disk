@@ -16,7 +16,7 @@ import Socials from '../components/Socials.astro';
 			<p>I live in Wales and write code as a job. I'm a <em>learn-a-bit-about-alot</em> sort of person, and I want the things I make to feel like magic ✨</p>
 	<h2>My latest thing</h2>
 	<Card icon='github' href='https://github.com/sheeshee/codename' title="Codename" body="I like GitHub’s repo name generator, but I wanted something that worked locally." />
-	<h3><a href='/capable-disk/projects'>See more things</a>✨</h3>
+	<h3><span>🚀</span><a href='/capable-disk/projects'>See more things</a></h3>
 	</Main>
 </Layout>
 
@@ -55,6 +55,41 @@ import Socials from '../components/Socials.astro';
 	}
 	a {
 		color: #000042;
+	}
+
+	span {
+		display: inline-block;
+		margin-right: 0.5em;
+	}
+	h3 {
+		width: fit-content;
+	}
+
+	h3:hover span {
+	    animation: rocket-takeoff 0.7s ease-out forwards;
+	}
+
+	@keyframes rocket-takeoff {
+	    0% {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	    }
+	    60% {
+		    opacity: 1;
+		}
+	    89% {
+		transform: translate(80px, -80px);
+		opacity: 0; 
+	    }
+	    90% {
+		    transform: translate(-10px, 10px);
+		    opacity: 0;
+	    }
+	    100% {
+		    transform: translate(0px, 0px);
+		    opacity: 1;
+		}
+
 	}
 	
 </style>
