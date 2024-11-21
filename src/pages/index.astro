@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Main from '../layouts/Main.astro';
 import Card from '../components/Card.astro';
 import Socials from '../components/Socials.astro';
+import * as FeaturedProject from '../content/projects/2024-10-26-codename.md'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -14,7 +15,12 @@ import Socials from '../components/Socials.astro';
 			<Socials/>	
 			<p>I live in Wales and write code as a job. I'm a <em>learn-a-bit-about-alot</em> sort of person, and I want the things I make to feel like magic ✨</p>
 	<h2>My latest thing</h2>
-	<Card icon='github' href='https://github.com/sheeshee/codename' title="Codename" body="I like GitHub’s repo name generator, but I wanted something that worked locally." />
+	<Card
+		icon={FeaturedProject.frontmatter.icon}
+		href={FeaturedProject.frontmatter.url}
+		title={FeaturedProject.frontmatter.title}
+		body={FeaturedProject.rawContent()}
+	/>
 	<h3><span>🚀</span><a href='/capable-disk/projects'>See more things</a></h3>
 </Layout>
 
