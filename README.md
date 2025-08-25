@@ -1,5 +1,7 @@
 # Astro Starter Kit: Basics
 
+This project became my personal website: https://github.com/sheeshee/sheeshee.github.io
+
 ```sh
 npm create astro@latest -- --template basics
 ```
